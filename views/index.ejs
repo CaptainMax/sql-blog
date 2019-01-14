@@ -1,3 +1,5 @@
+
+<% include ./partials/header %>
 <h1>Index page!!!</h1>
 
 <% data.forEach(function(blogs){ %>
@@ -6,5 +8,8 @@
         <img src="<%= blogs.image %> ">
         <span><%= blogs.created_at%></span>
         <p><%= blogs.body%></p>
+        <a href="/blogs/<%= blogs.id%>">Read More</a>
     </div>
 <% }) %>
+
+<% include ./partials/footer %>

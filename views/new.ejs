@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<div class="container">
+    <h1>New Blog</h1>
+    <div class="jumbotron">
+    <form action="/blogs" method= "POST" >
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Title</label>
+            <input type = "text" class="form-control" id="exampleFormControlInput1" name = "title" placeholder = "title">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Image</label>
+            <input type = "text" class="form-control" id="exampleFormControlInput1" name = "image" placeholder = "image">    
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Body</label>
+            <textarea type = "text" class="form-control" id="exampleFormControlTextarea1" name = "body" placeholder = "blog post goes here" rows="4"></textarea>
+        </div>
+        <button class="btn btn-danger"  type = "submit">submit </button>
+    </form>
+    </div>
+</div>
+
+
+
+<% include ./partials/footer %>        
