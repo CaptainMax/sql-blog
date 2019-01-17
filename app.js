@@ -144,6 +144,22 @@ app.put("/blogs/:id", function(req, res){
     //res.send("update route");
 });
 
+// DELETE ROUTE
+app.delete("/blogs/:id", function(req,res){
+    //res.send("YOU HAVE REACHED THE DESTROY ROUTE");
+    //destroy blog
+    var ids = req.params.id;
+    var q = 'DELETE FROM blogSchema where id = ("'+ ids +'")';
+    connection.query(q, function(err){
+        if(err){
+            console.log("ERROR TO DELETE");
+            res.redirect("/blogs");
+        } else {
+             res.redirect("/blogs");
+        }
+    });
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("SERVER IS RUNNING");
 });

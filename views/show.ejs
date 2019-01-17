@@ -10,11 +10,16 @@
                          <div>
                          <span><%=foundBlog.created_at.toDateString() %></span>
                          </div>
+                         <div>
                          <p class="card-text mb-auto"><%= foundBlog.body %></p>
+                         </div>
+                         <form style="margin: 0; padding: 0;" id = "det" action="/blogs/<%=foundBlog.id%>?_method=DELETE" method = "POST">
+                         <a class="btn btn-outline-secondary" href="/blogs/<%=foundBlog.id%>">Edit</a>
                         
+                        <button  style="display: inline;" class = "btn btn-outline-success">DELETE</button>    
+                        </form>
                     </div>
                 </div>
-
 <% }) %>
 </div>
 <% include ./partials/footer %>        

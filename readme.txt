@@ -13,3 +13,9 @@ npm install method-override --save
 
 add update method to the blog project. Learn how to use method-override function to help us 
 update the information.
+
+Time 1-16-2019
+version 04
+our goal is add delete method 
+
+add delete method, make navbar useful, update some css style.
