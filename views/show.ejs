@@ -6,8 +6,12 @@
                         <h3 class="mb-0 text-center">
                             <%=foundBlog.title%>
                         </h3>
-                        <img style="width:100%" id = "imagesss" class="card-img-right flex-auto d-none d-lg-block " src="<%=foundBlog.image%>" alt="Card image cap">
+                        <img  id = "imagesss" class="card-img-right flex-auto d-none d-lg-block " src="<%=foundBlog.image%>" alt="Card image cap">
+                         <div>
+                         <span><%=foundBlog.created_at.toDateString() %></span>
+                         </div>
                          <p class="card-text mb-auto"><%= foundBlog.body %></p>
+                        
                     </div>
                 </div>
 
