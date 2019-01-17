@@ -1,4 +1,5 @@
 var express     = require("express");
+var expressSanitizer = require("express-sanitizer");
 var mysql       = require("mysql");
 var methodOvrride = require("method-override");
 var bodyParser  = require("body-parser");
@@ -20,7 +21,10 @@ var connection = mysql.createConnection({
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(methodOvrride("_method"));
+
 app.use(bodyParser.urlencoded({extended:true}));
+//require below the bodyparser
+app.use(expressSanitizer());
 
 // RESTFUL ROUTES
 // Index route
@@ -47,6 +51,10 @@ app.get("/blogs/new",function(req,res){
 // CREATE ROUTE
 app.post("/blogs",function(req, res){
    //create blogs
+//   console.log(req.body);
+//   req.body.blog.body = req.sanitize(req.body.blog.body);
+//   console.log("=========");
+   console.log(req.body);
    var title = req.body.title;
    var image = req.body.image;
    var bodys = req.body.body;

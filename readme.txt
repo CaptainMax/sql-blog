@@ -19,3 +19,16 @@ version 04
 our goal is add delete method 
 
 add delete method, make navbar useful, update some css style.
+
+Time 1-16-2019
+version 05
+our goal is add express sanitiser, update some css
+npm install express-sanitiser
+express-sanitiser prevent use js do some harmful things to our website.
+(remove js to pure html);  not useful at all beacuse we didn't want to use html setence
+
+finish style
+
+for future
+I want to add rich text editor, push to the server. Then try to add Authentication 
+and continue improve the css style.

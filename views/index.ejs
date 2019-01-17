@@ -1,15 +1,25 @@
 
 <% include ./partials/header %>
-<h1>Index page!!!</h1>
-
-<% data.forEach(function(blogs){ %>
-    <div>
-        <h2><%=blogs.title%></h2>
-        <img src="<%= blogs.image %> ">
-        <span><%= blogs.created_at%></span>
-        <p><%= blogs.body.substring(0,100)%>...</p>
-        <a href="/blogs/<%= blogs.id%>">Read More</a>
+<div class="container">
+     <h1>BLOG SITE</h1>
+     <div class="list-group">
+        <% data.forEach(function(blogs){ %>
+        <div>
+            <p><p>
+            <h2><a class="text-dark" href="/blogs/<%= blogs.id%>"><%=blogs.title%></a></h2>
+            
+            <img  id = "imagesss" class="card-img-right flex-auto d-none d-lg-block " src="<%= blogs.image %> ">
+            
+            <p>
+            <span><%= blogs.created_at.toDateString()%></span>
+            </p>
+            <p><%= blogs.body.substring(0,100)%>...</p>
+            <a class="btn btn-primary" href="/blogs/<%= blogs.id%>">Read More</a>
+            </p></p>
+        </div>
+        <% }) %>
     </div>
-<% }) %>
+</div>
+
 
 <% include ./partials/footer %>
